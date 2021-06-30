@@ -1,10 +1,20 @@
 import React from "react";
 
 const App = () => {
+  const onClickButton = () => alert();
+  const contenStyle = {
+    color: "blue",
+    // キャメルケース
+    fontSize: "18px"
+  };
+
   return (
     <>
-      <h1>こんにちは!</h1>
-      <p>お元気ですか</p>
+      {/* 　javaScriptでstyleを当てる。HTMLの中にjavaScriptを入れるためには{} その中の｛｝はオブジェクト */}
+      <h1 style={{ color: "red" }}>こんにちは!</h1>
+      <p style={contenStyle}>お元気ですか</p>
+      {/* {}を入れるとそこにはjavaScriptが反映 */}
+      <button onClick={onClickButton}>ボタン</button>
     </>
   );
 };
