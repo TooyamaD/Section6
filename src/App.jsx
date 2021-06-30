@@ -1,18 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
+import ColorfulMessage from "./Components/ColorfulMEssage";
 
 const App = () => {
   const onClickButton = () => alert();
-  const contenStyle = {
-    color: "blue",
-    // キャメルケース
-    fontSize: "18px"
-  };
 
   return (
     <>
       {/* 　javaScriptでstyleを当てる。HTMLの中にjavaScriptを入れるためには{} その中の｛｝はオブジェクト */}
       <h1 style={{ color: "red" }}>こんにちは!</h1>
-      <p style={contenStyle}>お元気ですか</p>
+
+      <ColorfulMessage color="blue">お元気ですか？</ColorfulMessage>
+      <ColorfulMessage color="pink">元気です</ColorfulMessage>
+
       {/* {}を入れるとそこにはjavaScriptが反映 */}
       <button onClick={onClickButton}>ボタン</button>
     </>
